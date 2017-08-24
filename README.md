@@ -4,8 +4,8 @@ This is a personal project of the UT Dallas Rugby Team. We used [Material Kit](h
 
 ## Maintained Currently by:
 
-[Edmund Miller](https://github.com/Emiller88)
-[Caleb Yale](https://github.com/Literal-Silver)
++ [Edmund Miller](https://github.com/Emiller88)
++ [Caleb Yale](https://github.com/Literal-Silver)
 
 ## For Future Maintainers
 
