@@ -28,7 +28,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)};
       gtag('js', new Date());
-    
+
       gtag('config', 'UA-107034006-2');
     </script>
 
@@ -51,7 +51,7 @@
 						<img src="assets/img/UTD_emblem_solid_flame.png" alt="UTD Emblem Flame" rel="tooltip" title="" data-placement="bottom" data-html="true">
 	                </div>
 	                <div class="brand">
-			<!-- Add text here for next to monogram -->   
+			<!-- Add text here for next to monogram -->
 	                </div>
 				</div>
 	      	</a>
@@ -169,9 +169,9 @@
 					<br>
 
 					<div style="text-align:center">
-  						<span class="dot" onclick="currentSlide(1)"></span> 
-  						<span class="dot" onclick="currentSlide(2)"></span> 
-  						<span class="dot" onclick="currentSlide(3)"></span> 
+  						<span class="dot" onclick="currentSlide(1)"></span>
+  						<span class="dot" onclick="currentSlide(2)"></span>
+  						<span class="dot" onclick="currentSlide(3)"></span>
 					</div>
 
 
@@ -214,11 +214,11 @@
 					<br>
 
 					<div style="text-align:center">
-  						<span class="dot" onclick="currentSlide(1)"></span> 
-  						<span class="dot" onclick="currentSlide(2)"></span> 
-  						<span class="dot" onclick="currentSlide(3)"></span> 
+  						<span class="dot" onclick="currentSlide(1)"></span>
+  						<span class="dot" onclick="currentSlide(2)"></span>
+  						<span class="dot" onclick="currentSlide(3)"></span>
 					</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 </div>
@@ -233,14 +233,14 @@ function showSlides() {
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
+       slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
+    if (slideIndex> slides.length) {slideIndex = 1}
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";  
+    slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }</script>
