@@ -1,13 +1,13 @@
 # See https://github.com/netlify/netlify-cms/blob/master/example/config.yml
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: alternate_site # Branch to update (optional; defaults to master)
 
 # display_url: https://gatsbro.netlify.com # This url will display in the top-right of the CMS
 media_library:
   name: uploadcare
   config:
-    publicKey: a73a170cb5cdef662983
+    publicKey: a4abb1285a638d8aa368
     multiple: false
     tabs: 'file camera url facebook gdrive'
     effects: 'crop,rotate,enhance,grayscale'
