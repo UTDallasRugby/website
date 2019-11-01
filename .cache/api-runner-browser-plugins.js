@@ -6,7 +6,7 @@ module.exports = [{
       options: {"plugins":[],"runtimeCaching":[{"urlPattern":{},"handler":"cacheFirst"},{"urlPattern":{},"handler":"staleWhileRevalidate"},{"urlPattern":{},"handler":"staleWhileRevalidate"}],"skipWaiting":true,"clientsClaim":true},
     },{
       plugin: require('../node_modules/gatsby-plugin-manifest/gatsby-browser.js'),
-      options: {"plugins":[],"name":"yellowcake","short_name":"yellowcake","start_url":"/","background_color":"#00C2BD","theme_color":"#00C2BD","display":"standalone","icon":"/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/static/images/logo.svg"},
+      options: {"plugins":[],"name":"utdallasrugby","short_name":"utdallasrugby","start_url":"/","background_color":"#00C2BD","theme_color":"#00C2BD","display":"standalone","icon":"/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/static/images/logo.svg"},
     },{
       plugin: require('../node_modules/gatsby-remark-images/gatsby-browser.js'),
       options: {"plugins":[],"maxWidth":800,"linkImagesToOriginal":false},
