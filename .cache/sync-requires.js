@@ -12,6 +12,7 @@ exports.components = {
   "component---src-templates-home-page-js": hot(preferDefault(require("/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/src/templates/HomePage.js"))),
   "component---src-templates-default-page-js": hot(preferDefault(require("/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/src/templates/DefaultPage.js"))),
   "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/.cache/dev-404-page.js"))),
-  "component---src-pages-404-js": hot(preferDefault(require("/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/src/pages/404.js")))
+  "component---src-pages-404-js": hot(preferDefault(require("/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/src/pages/404.js"))),
+  "component---src-templates-photos-page-js": hot(preferDefault(require("/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/src/templates/PhotosPage.js")))
 }
 

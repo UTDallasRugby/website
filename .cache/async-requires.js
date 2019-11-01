@@ -9,6 +9,7 @@ exports.components = {
   "component---src-templates-home-page-js": () => import("../src/templates/HomePage.js" /* webpackChunkName: "component---src-templates-home-page-js" */),
   "component---src-templates-default-page-js": () => import("../src/templates/DefaultPage.js" /* webpackChunkName: "component---src-templates-default-page-js" */),
   "component---cache-dev-404-page-js": () => import("dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
-  "component---src-pages-404-js": () => import("../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */)
+  "component---src-pages-404-js": () => import("../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-templates-photos-page-js": () => import("../src/templates/PhotosPage.js" /* webpackChunkName: "component---src-templates-photos-page-js" */)
 }
 

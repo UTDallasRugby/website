@@ -1,5 +1,5 @@
 .Nav {
-  background: white;
+  background: var(--primary);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -38,7 +38,7 @@
   display: block;
   font-weight: 500;
   transition: color 0.2s, border-bottom-color 0.2s;
-  color: inherit;
+  color: rgb(223, 223, 223);
   text-decoration: none;
   border-bottom: 2px solid;
   border-bottom-color: transparent;
@@ -47,7 +47,6 @@
 .NavLink:hover,
 .NavLink.active,
 .NavLink:focus {
-  color: var(--primary);
   border-bottom-color: currentColor;
 }
 
@@ -79,7 +78,7 @@
   top: 100%;
   left: 0;
   width: auto;
-  background: white;
+  background: var(--primary);
   /* opacity: 0; */
   max-height: 0;
   overflow: hidden;
