@@ -2,6 +2,14 @@
 
 ## Contributing
 
+### Trunk Based Developement
+
+[Trunk Based Development Intro](https://trunkbaseddevelopment.com/)
+
+Make little branches for each feature and quickly merge them into master often.
+
+If Master ends up ahead of your branch follow this [guide to rebase](https://blog.algolia.com/master-git-rebase/).
+
 ### How to Fork the Repo
 
 [fork a repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
