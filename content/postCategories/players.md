@@ -2,7 +2,6 @@
 template: BlogIndex
 title: Players
 subtitle: ''
-featuredImage: >-
-  https://ucarecdn.com/db0b1431-8739-426f-970d-8a80eacf02ef/-/preview/-/rotate/270/
+featuredImage: 'https://ucarecdn.com/d4fa8e4e-45e4-4808-a7c7-360f51b19142/'
 ---
 
