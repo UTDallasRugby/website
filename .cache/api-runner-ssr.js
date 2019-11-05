@@ -1,20 +1,20 @@
 var plugins = [{
-      plugin: require('/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/home/emiller/src/personal/UTDallasRugby.github.io/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/node_modules/gatsby-plugin-google-tagmanager/gatsby-ssr'),
+      plugin: require('/home/emiller/src/personal/UTDallasRugby.github.io/node_modules/gatsby-plugin-google-tagmanager/gatsby-ssr'),
       options: {"plugins":[],"id":"GTM-P4RNF8D","includeInDevelopment":false},
     },{
-      plugin: require('/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      plugin: require('/home/emiller/src/personal/UTDallasRugby.github.io/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[],"runtimeCaching":[{"urlPattern":{},"handler":"cacheFirst"},{"urlPattern":{},"handler":"staleWhileRevalidate"},{"urlPattern":{},"handler":"staleWhileRevalidate"}],"skipWaiting":true,"clientsClaim":true},
     },{
-      plugin: require('/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"utdallasrugby","short_name":"utdallasrugby","start_url":"/","background_color":"#00C2BD","theme_color":"#00C2BD","display":"standalone","icon":"/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/static/images/logo.svg"},
+      plugin: require('/home/emiller/src/personal/UTDallasRugby.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"utdallasrugby","short_name":"utdallasrugby","start_url":"/","background_color":"#008542","theme_color":"#008542","display":"standalone","icon":"/home/emiller/src/personal/UTDallasRugby.github.io/static/images/logo.svg"},
     },{
-      plugin: require('/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/node_modules/gatsby-remark-images/gatsby-ssr'),
+      plugin: require('/home/emiller/src/personal/UTDallasRugby.github.io/node_modules/gatsby-remark-images/gatsby-ssr'),
       options: {"plugins":[],"maxWidth":800,"linkImagesToOriginal":false},
     },{
-      plugin: require('/Users/Tristen/Desktop/dev/UTDallasRugby.github.io/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      plugin: require('/home/emiller/src/personal/UTDallasRugby.github.io/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
