@@ -4,7 +4,7 @@ title: Edmund Miller
 status: Published
 date: '2019-11-01'
 featuredImage: >-
-  https://ucarecdn.com/8e6ef298-7c3c-4fb7-a2ec-a0b172ca3815/-/crop/824x836/388,71/-/preview/
+  https://ucarecdn.com/8e6ef298-7c3c-4fb7-a2ec-a0b172ca3815/-/crop/817x695/388,111/-/preview/
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. 
