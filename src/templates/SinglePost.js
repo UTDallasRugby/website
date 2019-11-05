@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
-import _get from 'lodash/get'
-import { Link, graphql } from 'gatsby'
-import { ChevronLeft } from 'react-feather'
+import React, { Fragment } from 'react';
+import _get from 'lodash/get';
+import { Link, graphql } from 'gatsby';
+import { ChevronLeft } from 'react-feather';
 
-import Content from '../components/Content'
-import Layout from '../components/Layout'
-import './SinglePost.css'
+import Content from '../components/Content';
+import Layout from '../components/Layout';
+import './SinglePost.css';
 
 export const SinglePostTemplate = ({
   title,
@@ -13,7 +13,7 @@ export const SinglePostTemplate = ({
   body,
   nextPostURL,
   prevPostURL,
-  categories = []
+  categories = [],
 }) => (
   <main>
     <article
@@ -85,11 +85,11 @@ export const SinglePostTemplate = ({
       </div>
     </article>
   </main>
-)
+);
 
 // Export Default SinglePost for front-end
 const SinglePost = ({ data: { post, allPosts } }) => {
-  const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
+  const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id);
   return (
     <Layout
       meta={post.frontmatter.meta || false}
@@ -103,10 +103,10 @@ const SinglePost = ({ data: { post, allPosts } }) => {
         prevPostURL={_get(thisEdge, 'previous.fields.slug')}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default SinglePost
+export default SinglePost;
 
 export const pageQuery = graphql`
   ## Query for SinglePost data
@@ -156,4 +156,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

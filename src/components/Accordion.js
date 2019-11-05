@@ -1,13 +1,13 @@
-import React from 'react'
-import ChevronDown from 'react-feather/dist/icons/chevron-down'
-import _kebabCase from 'lodash/kebabCase'
-import './Accordion.css'
+import React from 'react';
+import ChevronDown from 'react-feather/dist/icons/chevron-down';
+import _kebabCase from 'lodash/kebabCase';
+import './Accordion.css';
 
 export default class Accordion extends React.Component {
   static defaultProps = {
     items: [],
-    className: ''
-  }
+    className: '',
+  };
 
   // use state to auto close but has issues mobile view. onClick={() => this.handleClick(index)}
   // state = {
@@ -20,10 +20,10 @@ export default class Accordion extends React.Component {
   //   })
   // }
 
-  handleClick = event => event.target.classList.toggle('active')
+  handleClick = event => event.target.classList.toggle('active');
 
   render() {
-    const { items, className } = this.props
+    const { items, className } = this.props;
     return (
       <div className={`Accordion ${className}`}>
         {!!items &&
@@ -48,6 +48,6 @@ export default class Accordion extends React.Component {
             </div>
           ))}
       </div>
-    )
+    );
   }
 }

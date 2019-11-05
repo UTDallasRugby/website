@@ -1,5 +1,5 @@
-import React from 'react'
-import './GithubCorner.css'
+import React from 'react';
+import './GithubCorner.css';
 
 export default ({ url, style, className = '', color = '#151513' }) => (
   <a
@@ -30,4 +30,4 @@ export default ({ url, style, className = '', color = '#151513' }) => (
       />
     </svg>
   </a>
-)
+);

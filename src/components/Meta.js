@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 export const query = graphql`
   fragment Meta on MarkdownRemark {
@@ -13,7 +13,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export default class Meta extends Component {
   render() {
@@ -28,9 +28,9 @@ export default class Meta extends Component {
       canonicalLink,
       siteTitle,
       siteDescription,
-      googleTrackingId
+      googleTrackingId,
       // overwrite { title, description } if in fields or fields.meta
-    } = this.props
+    } = this.props;
 
     return (
       <Helmet>
@@ -78,6 +78,6 @@ export default class Meta extends Component {
           </script>
         )}
       </Helmet>
-    )
+    );
   }
 }

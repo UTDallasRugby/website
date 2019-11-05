@@ -1,13 +1,13 @@
-import React from 'react'
-import { MapPin, Smartphone, Mail } from 'react-feather'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { MapPin, Smartphone, Mail } from 'react-feather';
+import { graphql } from 'gatsby';
 
-import PageHeader from '../components/PageHeader'
-import FormSimpleAjax from '../components/FormSimpleAjax'
-import Content from '../components/Content'
-import GoogleMap from '../components/GoogleMap'
-import Layout from '../components/Layout'
-import './ContactPage.css'
+import PageHeader from '../components/PageHeader';
+import FormSimpleAjax from '../components/FormSimpleAjax';
+import Content from '../components/Content';
+import GoogleMap from '../components/GoogleMap';
+import Layout from '../components/Layout';
+import './ContactPage.css';
 
 // Export Template for use in CMS preview
 export const ContactPageTemplate = ({
@@ -18,7 +18,7 @@ export const ContactPageTemplate = ({
   address,
   phone,
   email,
-  locations
+  locations,
 }) => (
   <main className="Contact">
     <PageHeader
@@ -35,7 +35,7 @@ export const ContactPageTemplate = ({
               <a
                 className="Contact--Details--Item"
                 href={`https://www.google.com.au/maps/search/${encodeURI(
-                  address
+                  address,
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export const ContactPageTemplate = ({
 
     <GoogleMap locations={locations} />
   </main>
-)
+);
 
 const ContactPage = ({ data: { page } }) => (
   <Layout
@@ -73,9 +73,9 @@ const ContactPage = ({ data: { page } }) => (
   >
     <ContactPageTemplate {...page.frontmatter} body={page.html} />
   </Layout>
-)
+);
 
-export default ContactPage
+export default ContactPage;
 
 export const pageQuery = graphql`
   query ContactPage($id: String!) {
@@ -98,4 +98,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

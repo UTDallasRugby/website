@@ -1,11 +1,11 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import PageHeader from "../components/PageHeader";
-import Content from "../components/Content";
-import Layout from "../components/Layout";
-import Gallery from "../components/Gallery";
-import SVGIcon from "../components/SVGIcon";
+import PageHeader from '../components/PageHeader';
+import Content from '../components/Content';
+import Layout from '../components/Layout';
+import Gallery from '../components/Gallery';
+import SVGIcon from '../components/SVGIcon';
 
 // Export Template for use in CMS preview
 export const PhotosPageTemplate = ({
@@ -13,7 +13,7 @@ export const PhotosPageTemplate = ({
   subtitle,
   featuredImage,
   body,
-  gallery
+  gallery,
 }) => (
   <main className="PhotosPage">
     <PageHeader

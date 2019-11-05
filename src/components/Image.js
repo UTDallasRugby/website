@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import Observer from './Observer'
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import Observer from './Observer';
 
-import './Image.css'
+import './Image.css';
 
 class Image extends React.Component {
   constructor(props) {
-    super(props)
-    this.ref = React.createRef()
+    super(props);
+    this.ref = React.createRef();
   }
 
   imageSizes = [
@@ -21,33 +21,33 @@ class Image extends React.Component {
     '1200',
     '1500',
     '1600',
-    '2000'
-  ] // image sizes used for image source sets
+    '2000',
+  ]; // image sizes used for image source sets
 
   state = {
-    isIntersecting: false
-  }
+    isIntersecting: false,
+  };
 
   handleIntersection = e => {
     if (e.isIntersecting) {
-      this.setState({ isIntersecting: true })
+      this.setState({ isIntersecting: true });
     }
-  }
+  };
 
   checkIsUploadcare(src) {
-    return typeof src === 'string' && src.includes('ucarecdn.com')
+    return typeof src === 'string' && src.includes('ucarecdn.com');
   }
 
   getResolutionString(res) {
     /* add resolutions options for inline images */
     if (res === 'small') {
-      res = '800x'
+      res = '800x';
     } else if (res === 'medium') {
-      res = '1000x'
+      res = '1000x';
     } else if (res === 'large') {
-      res = '2000x'
+      res = '2000x';
     }
-    return res
+    return res;
   }
 
   render() {
@@ -63,17 +63,17 @@ class Image extends React.Component {
       onClick,
       title = '',
       alt = '',
-      lazy = true
-    } = this.props
+      lazy = true,
+    } = this.props;
 
     const isUploadcare = this.checkIsUploadcare(src),
-      fullImage = !isUploadcare || !lazy
+      fullImage = !isUploadcare || !lazy;
 
     /* create source set for images */
     if (isUploadcare) {
       secSet = this.imageSizes.map(size => {
-        return `${src}-/progressive/yes/-/format/auto/-/preview/${size}x${size}/-/quality/lightest/${size}.jpg ${size}w`
-      })
+        return `${src}-/progressive/yes/-/format/auto/-/preview/${size}x${size}/-/quality/lightest/${size}.jpg ${size}w`;
+      });
     }
 
     fullSrc = `${src}${
@@ -82,19 +82,19 @@ class Image extends React.Component {
           this.getResolutionString(resolutions) +
           '/'
         : ''
-    }`
+    }`;
     smallSrc = `${src}${
       isUploadcare ? '-/progressive/yes/-/format/auto/-/resize/10x/' : ''
-    }`
+    }`;
 
-    let style = {}
+    let style = {};
     if (background) {
       style = {
         backgroundImage: `url(${
           this.state.isIntersecting ? fullSrc : smallSrc
         })`,
-        backgroundSize
-      }
+        backgroundSize,
+      };
     }
 
     return (
@@ -106,7 +106,7 @@ class Image extends React.Component {
               ref={this.ref}
               style={{
                 backgroundImage: `url(${smallSrc})`,
-                backgroundSize: 'cover'
+                backgroundSize: 'cover',
               }}
             >
               {!background && (
@@ -155,12 +155,12 @@ class Image extends React.Component {
           </Fragment>
         )}
       </Fragment>
-    )
+    );
   }
 }
 
 Image.propTypes = {
-  alt: PropTypes.string.isRequired
-}
+  alt: PropTypes.string.isRequired,
+};
 
-export default Image
+export default Image;

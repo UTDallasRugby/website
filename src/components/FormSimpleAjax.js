@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
-import { stringify } from 'qs'
-import { serialize } from 'dom-form-serializer'
+import React, { Fragment } from 'react';
+import Helmet from 'react-helmet';
+import { stringify } from 'qs';
+import { serialize } from 'dom-form-serializer';
 
-import './Form.css'
+import './Form.css';
 
 class Form extends React.Component {
   static defaultProps = {
@@ -12,49 +12,49 @@ class Form extends React.Component {
     action: '',
     successMessage: 'Thanks for your enquiry, we will get back to you soon',
     errorMessage:
-      'There is a problem, your message has not been sent, please try contacting us via email'
-  }
+      'There is a problem, your message has not been sent, please try contacting us via email',
+  };
 
   state = {
     alert: '',
-    disabled: false
-  }
+    disabled: false,
+  };
 
   handleSubmit = e => {
-    e.preventDefault()
-    if (this.state.disabled) return
+    e.preventDefault();
+    if (this.state.disabled) return;
 
-    const form = e.target
-    const data = serialize(form)
-    this.setState({ disabled: true })
+    const form = e.target;
+    const data = serialize(form);
+    this.setState({ disabled: true });
     fetch(form.action + '?' + stringify(data), {
-      method: 'POST'
+      method: 'POST',
     })
       .then(res => {
         if (res.ok) {
-          return res
+          return res;
         } else {
-          throw new Error('Network error')
+          throw new Error('Network error');
         }
       })
       .then(() => {
-        form.reset()
+        form.reset();
         this.setState({
           alert: this.props.successMessage,
-          disabled: false
-        })
+          disabled: false,
+        });
       })
       .catch(err => {
-        console.error(err)
+        console.error(err);
         this.setState({
           disabled: false,
-          alert: this.props.errorMessage
-        })
-      })
-  }
+          alert: this.props.errorMessage,
+        });
+      });
+  };
 
   render() {
-    const { name, subject, action } = this.props
+    const { name, subject, action } = this.props;
 
     return (
       <Fragment>
@@ -172,8 +172,8 @@ class Form extends React.Component {
           />
         </form>
       </Fragment>
-    )
+    );
   }
 }
 
-export default Form
+export default Form;

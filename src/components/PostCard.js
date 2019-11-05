@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Image from './Image'
-import './PostCard.css'
+import Image from './Image';
+import './PostCard.css';
 
 const PostCard = ({
   featuredImage,
@@ -27,6 +27,6 @@ const PostCard = ({
       {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>}
     </div>
   </Link>
-)
+);
 
-export default PostCard
+export default PostCard;

@@ -1,17 +1,17 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
-import Layout from '../components/Layout'
-import SVGIcon from '../components/SVGIcon'
+import PageHeader from '../components/PageHeader';
+import Content from '../components/Content';
+import Layout from '../components/Layout';
+import SVGIcon from '../components/SVGIcon';
 
 // Export Template for use in CMS preview
 export const DefaultPageTemplate = ({
   title,
   subtitle,
   featuredImage,
-  body
+  body,
 }) => (
   <main className="DefaultPage">
     <PageHeader
@@ -27,7 +27,7 @@ export const DefaultPageTemplate = ({
       </div>
     </section>
   </main>
-)
+);
 
 const DefaultPage = ({ data: { page } }) => (
   <Layout
@@ -36,8 +36,8 @@ const DefaultPage = ({ data: { page } }) => (
   >
     <DefaultPageTemplate {...page.frontmatter} body={page.html} />
   </Layout>
-)
-export default DefaultPage
+);
+export default DefaultPage;
 
 export const pageQuery = graphql`
   query DefaultPage($id: String!) {
@@ -51,4 +51,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

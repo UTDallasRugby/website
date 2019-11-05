@@ -1,30 +1,30 @@
-import React, { Component } from 'react'
-import { Location } from '@reach/router'
-import { Link } from 'gatsby'
-import { Menu, X } from 'react-feather'
-import Logo from './Logo'
+import React, { Component } from 'react';
+import { Location } from '@reach/router';
+import { Link } from 'gatsby';
+import { Menu, X } from 'react-feather';
+import Logo from './Logo';
 
-import './Nav.css'
+import './Nav.css';
 
 export class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false,
-    currentPath: false
-  }
+    currentPath: false,
+  };
 
   componentDidMount = () =>
-    this.setState({ currentPath: this.props.location.pathname })
+    this.setState({ currentPath: this.props.location.pathname });
 
-  handleMenuToggle = () => this.setState({ active: !this.state.active })
+  handleMenuToggle = () => this.setState({ active: !this.state.active });
 
   // Only close nav if it is open
-  handleLinkClick = () => this.state.active && this.handleMenuToggle()
+  handleLinkClick = () => this.state.active && this.handleMenuToggle();
 
   toggleSubNav = subNav =>
     this.setState({
-      activeSubNav: this.state.activeSubNav === subNav ? false : subNav
-    })
+      activeSubNav: this.state.activeSubNav === subNav ? false : subNav,
+    });
 
   render() {
     const { active } = this.state,
@@ -40,7 +40,7 @@ export class Navigation extends Component {
         >
           {children}
         </Link>
-      )
+      );
 
     return (
       <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
@@ -57,7 +57,7 @@ export class Navigation extends Component {
             <NavLink to="/sponsors">Sponsors</NavLink>
             <NavLink to="/shop">Shop</NavLink>
             <NavLink to="/contact/">Contact</NavLink>
-            
+
             <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'posts' ? 'active' : ''
@@ -92,7 +92,6 @@ export class Navigation extends Component {
                 <NavLink to="/components/">Components</NavLink>
               </div>
             </div>
-            
           </div>
           <button
             className="Button-blank Nav--MenuButton"
@@ -102,10 +101,10 @@ export class Navigation extends Component {
           </button>
         </div>
       </nav>
-    )
+    );
   }
 }
 
 export default ({ subNav }) => (
   <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
-)
+);

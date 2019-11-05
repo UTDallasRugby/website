@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import Meta from './Meta'
-import Nav from './Nav'
-import Footer from './Footer'
-import GithubCorner from './GithubCorner'
+import React, { Fragment } from 'react';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import Meta from './Meta';
+import Nav from './Nav';
+import Footer from './Footer';
+import GithubCorner from './GithubCorner';
 
-import 'modern-normalize/modern-normalize.css'
-import './globalStyles.css'
+import 'modern-normalize/modern-normalize.css';
+import './globalStyles.css';
 
 export default ({ children, meta, title }) => {
   return (
@@ -45,10 +45,10 @@ export default ({ children, meta, title }) => {
           subNav = {
             posts: data.allPosts.hasOwnProperty('edges')
               ? data.allPosts.edges.map(post => {
-                  return { ...post.node.fields, ...post.node.frontmatter }
+                  return { ...post.node.fields, ...post.node.frontmatter };
                 })
-              : false
-          }
+              : false,
+          };
 
         return (
           <Fragment>
@@ -57,7 +57,7 @@ export default ({ children, meta, title }) => {
               titleTemplate={`%s | ${siteTitle}`}
             >
               {title}
-              <link href="https://ucarecdn.com" rel="preconnect" crossorigin />
+              <link href="https://ucarecdn.com" rel="preconnect" crossOrigin />
               <link rel="dns-prefetch" href="https://ucarecdn.com" />
               {/* Add font link tags here */}
             </Helmet>
@@ -81,8 +81,8 @@ export default ({ children, meta, title }) => {
 
             <Footer />
           </Fragment>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
