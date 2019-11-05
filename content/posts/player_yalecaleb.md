@@ -3,7 +3,8 @@ template: SinglePost
 title: Caleb Yale
 status: Published
 date: '2019-11-01'
-featuredImage: 'https://ucarecdn.com/bd5d1edc-73be-488a-9d50-8ec28f5ab6a9/'
+featuredImage: >-
+  https://ucarecdn.com/d1506965-9aa9-4d85-915e-064ba6f78daf/-/crop/713x682/830,509/-/preview/
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
