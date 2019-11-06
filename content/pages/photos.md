@@ -2,7 +2,7 @@
 template: PhotosPage
 slug: photos
 title: Photos Page
-featuredImage: https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/
+featuredImage: https://cdn.discordapp.com/attachments/641517745711611904/641517856688832543/i-f7HPKsL-X3.png
 subtitle: This is the photos page subtitle.
 phone: 469 371 8598
 email: example@example.com
