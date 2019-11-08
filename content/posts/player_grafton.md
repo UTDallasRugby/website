@@ -1,6 +1,6 @@
 ---
 template: SinglePost
-title: <firstname> Grafton
+title: Grafton
 status: Published
 date: '2019-11-06'
 featuredImage: >-
