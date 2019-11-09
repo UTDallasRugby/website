@@ -1,6 +1,6 @@
 :root {
-  --primary: #008542;
-  --secondary: #000;
+  --primary: rgb(17, 71, 52);
+  --secondary: rgb(223, 117, 0);
   --lightGrey: rgb(175, 175, 175);
   --midGrey: #cacaca;
   --darkGrey: #272727;
@@ -228,6 +228,7 @@ blockquote {
   outline: none;
   border: none;
   cursor: pointer;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
