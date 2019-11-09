@@ -5,19 +5,19 @@ title: Contact Page
 featuredImage: >-
   https://ucarecdn.com/9ef9b9cc-49b3-46bb-a6d5-8dcd34ddd516/-/crop/4590x2982/0,0/-/preview/
 subtitle: This is the contact page subtitle.
-address: '404 James St, Burleigh Heads QLD 4220'
-phone: 0987 123 456
-email: example@example.com
+address: '800 W Campbell Rd, Richardson, TX 75080'
+phone: 469 371 8598
+email: utdmensrugby@gmail.com
 locations:
-  - lat: '-27.9654732'
-    lng: '153.2432449'
+  - lat: '32.981830'
+    lng: '-96.752815'
     mapLink: ''
 meta:
   description: This is a meta description.
   title: Contact Page
 ---
 
-# Example contact form
+# Interested in UTD Rugby?
 
 This form is setup to use Netlify's form handling:
 

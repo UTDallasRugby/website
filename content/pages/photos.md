@@ -5,7 +5,7 @@ title: Photos Page
 featuredImage: https://cdn.discordapp.com/attachments/641517745711611904/641517856688832543/i-f7HPKsL-X3.png
 subtitle: This is the photos page subtitle.
 phone: 469 371 8598
-email: example@example.com
+email: utdmensrugby@gmail.com
 gallery:
   - alt: yellow rope image
     image: 'https://ucarecdn.com/277cdf82-24aa-4d80-8169-bb46f4cd319d/'
