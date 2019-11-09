@@ -4,24 +4,54 @@ import './Footer.css';
 
 export default () => (
   <div>
-    <h2 className="taCenter">
-      Follow us on:{' '}
-      <span>
-        <h5>Twitter</h5>
-        <a href="https://twitter.com/utdrugby">@UTDRugby</a>
-      </span>
-      <span>
-        <h5>Instagram</h5>
-        <a href="https://instagram.com/utd_rugby">@UTD_Rugby</a>
-      </span>
-    </h2>
+    <div className="footer_inner">
+      <ul className="icons">
+        <li>
+          <a
+            href="https://www.facebook.com/pages/category/School-Sports-Team/UT-Dallas-Rugby-Football-Club-211299435603865/"
+            class="icon alt fa-facebook"
+            target="_blank"
+          >
+            <span class="label">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/utd_rugby/"
+            class="icon alt fa-instagram"
+            target="_blank"
+          >
+            <span class="label">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/utdrugby"
+            class="icon alt fa-twitter"
+            target="_blank"
+          >
+            <span class="label">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/UTDallasRugby/"
+            class="icon alt fa-github"
+            target="_blank"
+          >
+            <span class="label">GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <br />
     <InstagramFeed count="8" />
     <footer className="footer">
       <div className="container taCenter">
         <span>
-          © Copyright {new Date().getFullYear()} All rights reserved. Crafted by{' '}
-          <a href="https://thriveweb.com.au/">Thrive</a>.
+          © Copyright {new Date().getFullYear()} Crafted by the UTD Men's Rugby
+          Tech Staff.
         </span>
       </div>
     </footer>

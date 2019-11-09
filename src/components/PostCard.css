@@ -2,7 +2,7 @@
   text-decoration: none;
   background: white;
   color: inherit;
-  border: 1px solid var(--lightGrey);
+  border: 1px solid var(--primary);
   border-radius: var(--borderRadius);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.15s ease-in-out;
@@ -27,6 +27,7 @@
 
 .PostCard--Content {
   padding: 0 2.5rem 2.5rem;
+  color: black;
 }
 
 .PostCard--Category {
