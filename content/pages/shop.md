@@ -12,5 +12,4 @@ meta:
   title: Shop
 ---
 
-
 Test Shop Page Content

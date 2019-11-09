@@ -241,6 +241,53 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
+                - file: 'content/pages/alumni.md'
+        label: 'Alumni Page'
+        name: 'alumni-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: HomePage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Accordion'
+            name: 'accordion'
+            widget: 'list'
+            required: false
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: Content, name: content, widget: text }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
   - name: infoPages
     label: Info Page
     editor:
