@@ -21,5 +21,4 @@ meta:
   title: Photos
 ---
 
-
 Test Photos Page Content
