@@ -22,6 +22,6 @@ class SeasonSpider(scrapy.Spider):
     ]
 
     def parse(self, response):
-        page = response.url.split("/")[-2]
-        filename = f"{page}.html"
+        page = response.url.split("/")[-1]
+        filename = f"seasons/{page}.html"
         Path(filename).write_bytes(response.body)
