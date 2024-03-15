@@ -1,41 +1,53 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
-  ],
-  settings: {
-    react: {
-      version: 'detect'
-    }
-  },
   env: {
-    browser: true,
     node: true,
-    es6: true
+    es2022: true,
+    browser: true,
   },
-  plugins: ['@typescript-eslint', 'react'],
+  extends: ['eslint:recommended', 'plugin:astro/recommended'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module' // Allows for the use of imports
+    tsconfigRootDir: __dirname,
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  rules: {
-    'react/prop-types': 'off', // Disable prop-types as we use TypeScript for type checking
-    '@typescript-eslint/explicit-function-return-type': 'off'
-  },
+  rules: {},
   overrides: [
-    // Override some TypeScript rules just for .js files
     {
       files: ['*.js'],
       rules: {
-        '@typescript-eslint/no-var-requires': 'off' //
-      }
-    }
-  ]
+        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+      },
+    },
+    {
+      files: ['*.astro'],
+      parser: 'astro-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.astro'],
+      },
+      rules: {
+        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+      },
+    },
+    {
+      files: ['*.ts'],
+      parser: '@typescript-eslint/parser',
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' },
+        ],
+        '@typescript-eslint/no-non-null-assertion': 'off',
+      },
+    },
+    {
+      // Define the configuration for `<script>` tag.
+      // Script in `<script>` is assigned a virtual file name with the `.js` extension.
+      files: ['**/*.astro/*.js', '*.astro/*.js'],
+      parser: '@typescript-eslint/parser',
+    },
+  ],
 };

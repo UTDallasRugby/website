@@ -1,5 +1,4 @@
-src/registerServiceWorker.js
-node_modules/*
-public/*
-build/*
-config/*
+dist
+node_modules
+.github
+types.generated.d.ts
