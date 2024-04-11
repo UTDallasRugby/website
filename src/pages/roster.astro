@@ -3,7 +3,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
+import Players from '~/components/widgets/Players.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 import team from '~/content/team';
@@ -29,8 +29,7 @@ const metadata = {
     }}
   />
 
-  <!-- Testimonials Widget *********** -->
-  <Testimonials
+  <Players
     title="Forwards"
     testimonials={team.members}
     callToAction={{
