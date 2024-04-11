@@ -3,9 +3,19 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Roster',
-      href: getPermalink('/roster'),
+      text: 'Team',
+      links: [
+        {
+          text: 'Coaches and Exec Team',
+          href: getPermalink('/coaches'),
+        },
+        {
+          text: 'Roster',
+          href: getPermalink('/roster'),
+        },
+      ],
     },
+
     {
       text: 'Gallery',
       href: getPermalink('/gallery'),

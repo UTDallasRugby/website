@@ -4,7 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import superAndrew from '~/assets/images/superAndrew.jpg'
+import superAndrew from '~/assets/images/superAndrew.jpg';
 
 const metadata = {
   title: 'Alumni',
@@ -19,13 +19,17 @@ const metadata = {
     title="Alumni Form"
     subtitle="Do the form or get the Gorm."
     actions={[
-      { variant: 'primary', text: 'Do the form', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeVJc4k4nan_9goNj1f9F_U638-n-tGFO3-ZcsEsB2V1eWVYg/viewform?usp=sf_link', icon: 'tabler:square-rounded-arrow-right' },
-      {text: 'Get the Gorm', href: 'https://youtu.be/dQw4w9WgXcQ?si=WmKec9H9yFi3Z1pK' },
+      {
+        variant: 'primary',
+        text: 'Do the form',
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSeVJc4k4nan_9goNj1f9F_U638-n-tGFO3-ZcsEsB2V1eWVYg/viewform?usp=sf_link',
+        icon: 'tabler:square-rounded-arrow-right',
+      },
+      { text: 'Get the Gorm', href: 'https://youtu.be/dQw4w9WgXcQ?si=WmKec9H9yFi3Z1pK' },
     ]}
     image={{
       src: superAndrew,
       alt: 'Andrew Whities scoring a try',
     }}
   />
-
 </Layout>
