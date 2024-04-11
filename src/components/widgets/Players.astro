@@ -25,19 +25,10 @@ const {
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       testimonials &&
-        testimonials.map(({ title, testimonial, name, job, image }) => (
+        testimonials.map(({ title, testimonial, nickname, firstname, lastname, position, image, nationality, favoriteProtein, favoriteLift }) => (
           <div class="flex h-auto">
             <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
               {title && <h2 class="text-lg font-medium leading-6 pb-4">{title}</h2>}
-              {testimonial && (
-                <blockquote class="flex-auto">
-                  <p class="text-muted">" {testimonial} "</p>
-                </blockquote>
-              )}
-
-              <hr class="border-slate-200 dark:border-slate-600 my-4" />
-
-              <div class="flex items-center">
                 {image && (
                   <div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600">
                     {typeof image === 'string' ? (
@@ -55,11 +46,24 @@ const {
                   </div>
                 )}
 
+
+              <hr class="border-slate-200 dark:border-slate-600 my-4" />
+
+              <div class="flex items-center">
+
                 <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
-                  {name && <p class="text-base font-semibold">{name}</p>}
-                  {job && <p class="text-xs text-muted">{job}</p>}
+                  {nickname && <p class="text-base font-semibold">{nickname}</p>}
+                  {firstname && <p class="text-base font-semibold">{firstname} {lastname}</p>}
+                  {position && <p class="text-xs text-muted">{position}</p>}
                 </div>
+
               </div>
+                <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
+                  {nationality && <p class="text-base font-semibold">Nationality: </p> <p class="text-muted">{nationality}</p> }
+                  {favoriteProtein && <p class="text-base font-semibold">Favorite Protein: </p> <p class="text-muted">{favoriteProtein}</p> }
+                  {favoriteLift && <p class="text-base font-semibold">Favorite Lift: </p> <p class="text-muted">{favoriteLift}</p> }
+                </div>
+
             </div>
           </div>
         ))

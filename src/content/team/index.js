@@ -12,58 +12,77 @@ const team = {
 
   // Members of the team
   members: [
-      {
-        testimonial: `Name: Tarik Salih
-Nationality: Morocco 🇲🇦
-Favorite Protein: Grilled Chicken 🍗
-Favorite Lift: T-bar Rows`,
-        name: 'Big T',
-        job: 'Prop',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
+    {
+      testimonial: `test`,
+      nickname: 'Big T',
+      firstname: 'Tarik',
+      lastname: 'Salih',
+      nationality: 'Morocco 🇲🇴',
+      favoriteProtein: 'Grilled Chicken 🍗',
+      favoriteLift: 'T-bar Rows',
+      position: 'Prop',
+      image: {
+        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+        alt: 'Emily Kennedy Image',
       },
-      {
-        testimonial: `Nationality: Jordanian🇯🇴
-Favorite Protein: 🥩🥩
-Favorite Lift: Bench`,
-        name: 'Joseph Farghal',
-        job: 'Prop',
-        image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
-        },
+    },
+    {
+      testimonial: ``,
+      nickname: '',
+      firstname: 'Joseph ',
+      lastname: 'Farghal',
+      nationality: 'Jordanian🇯🇴',
+      favoriteProtein: '🥩🥩',
+      favoriteLift: 'Bench',
+      position: 'Prop',
+      image: {
+        src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+        alt: 'Sarah Hansen Image',
       },
-      {
-        testimonial: `Nationality: American 🇺🇸🦅
-Favorite Protein: 🍗
-Favorite Lift: Rear Delt Fly`,
-        name: 'Brenlen',
-        job: 'Lock',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
+    },
+    {
+      testimonial: ``,
+      nickname: 'Brenlen',
+      firstname: 'Dayne',
+      lastname: 'Sullivan',
+      position: 'Lock',
+      nationality: 'American 🇺🇸🦅🇪',
+      favoriteProtein: '🍗',
+      favoriteLift: 'Rear Delt Fly',
+
+      image: {
+        src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+        alt: 'Mark Wilkinson Image',
       },
-      {
-        testimonial: `Name: Dayne Sullivan
-Nationality: Irish ☘️🇮🇪
-Favorite Protein: Smoked Brisket 🍖
-Favorite Lift: Deadlift`,
-        name: 'Sully',
-        job: 'Flanker',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
+    },
+    {
+      testimonial: ``,
+      nickname: 'Sully',
+      firstname: 'Dayne',
+      lastname: 'Sullivan',
+      position: 'Flanker',
+      nationality: 'Irish ☘️🇮🇪',
+      favoriteProtein: 'Smoked Brisket 🍖',
+      favoriteLift: 'Deadlift',
+      image: {
+        src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+        alt: 'Mark Wilkinson Image',
       },
+      social: {
+        website: '#',
+        // twitter: '#',
+        instagram: '#',
+        // facebook: '#',
+        linkedin: '#',
+        // github: '#',
+      },
+    },
     {
       // The name of the first member
       name: 'Neil Sims',
       // Clickable link of the first member name
       nameLink: '#',
-      // The job title of the first member
+      // The position title of the first member
       title: 'Vue.js Developer',
       // The avatar of the first member
       avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png',
