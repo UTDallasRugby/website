@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Button from '~/components/ui/Button.astro';
@@ -17,6 +19,15 @@ const {
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props as Testimonials;
+
+const supported_social = [
+  // "website"
+  // "twitter"
+  'instagram',
+  // "facebook",
+  'linkedin',
+  'github',
+];
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
@@ -25,19 +36,31 @@ const {
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       testimonials &&
-        testimonials.map(({ title, testimonial, nickname, firstname, lastname, position, image, nationality, favoriteProtein, favoriteLift }) => (
-          <div class="flex h-auto">
-            <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
-              {title && <h2 class="text-lg font-medium leading-6 pb-4">{title}</h2>}
+        testimonials.map(
+          ({
+            title,
+            testimonial,
+            nickname,
+            firstname,
+            lastname,
+            position,
+            image,
+            nationality,
+            favoriteProtein,
+            favoriteLift,
+            social,
+          }) => (
+            <div class="flex h-auto">
+              <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
                 {image && (
-                  <div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600">
+                  <div class="h-100 w-100 rounded-full border border-slate-200 dark:border-slate-600">
                     {typeof image === 'string' ? (
                       <Fragment set:html={image} />
                     ) : (
                       <Image
-                        class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
-                        width={40}
-                        height={40}
+                        class="h-100 w-100 rounded-lg border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
+                        width={400}
+                        height={400}
                         widths={[400, 768]}
                         layout="fixed"
                         {...(image as any)}
@@ -46,27 +69,73 @@ const {
                   </div>
                 )}
 
+                <hr class="border-slate-200 dark:border-slate-600 my-4" />
 
-              <hr class="border-slate-200 dark:border-slate-600 my-4" />
-
-              <div class="flex items-center">
-
-                <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
-                  {nickname && <p class="text-base font-semibold">{nickname}</p>}
-                  {firstname && <p class="text-base font-semibold">{firstname} {lastname}</p>}
-                  {position && <p class="text-xs text-muted">{position}</p>}
+                <div class="flex items-center">
+                  <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
+                    {/* TODO Balance these out */}
+                    {nickname ? (
+                      <h2 class="text-xl font-medium leading-6 pb-4">{nickname}</h2>
+                    ) : (
+                      <h2 class="text-xl font-bold">
+                        {firstname} {lastname}
+                      </h2>
+                    )}
+                    {position && <p class="text-s text-muted">{position}</p>}
+                  </div>
                 </div>
-
+                <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
+                  {nationality && (
+                    <p class="text-base font-semibold">
+                      Nationality: <div class="text-muted">{nationality}</div>
+                    </p>
+                  )}
+                  {favoriteProtein && (
+                    <p class="text-base font-semibold">
+                      Favorite Protein: <div class="text-muted">{favoriteProtein}</div>
+                    </p>
+                  )}
+                  {favoriteLift && (
+                    <p class="text-base font-semibold">
+                      Favorite Lift: <div class="text-muted">{favoriteLift}</div>
+                    </p>
+                  )}
+                </div>
+                {social && (
+                  <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4 justify-center">
+                    <li>
+                      <a
+                        class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                        aria-label="LinkedIn"
+                        href={social.linkedin}
+                      >
+                        {social.linkedin && <Icon name="tabler:brand-linkedin" class="w-5 h-5" />}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                        aria-label="Instagram"
+                        href={social.instagram}
+                      >
+                        {social.instagram && <Icon name="tabler:brand-instagram" class="w-5 h-5" />}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                        aria-label="GitHub"
+                        href={social.github}
+                      >
+                        {social.github && <Icon name="tabler:brand-github" class="w-5 h-5" />}
+                      </a>
+                    </li>
+                  </ul>
+                )}
               </div>
-                <div class="grow ml-3 rtl:ml-0 rtl:mr-3">
-                  {nationality && <p class="text-base font-semibold">Nationality: </p> <p class="text-muted">{nationality}</p> }
-                  {favoriteProtein && <p class="text-base font-semibold">Favorite Protein: </p> <p class="text-muted">{favoriteProtein}</p> }
-                  {favoriteLift && <p class="text-base font-semibold">Favorite Lift: </p> <p class="text-muted">{favoriteLift}</p> }
-                </div>
-
             </div>
-          </div>
-        ))
+          )
+        )
     }
   </div>
   {
