@@ -1,11 +1,13 @@
 ---
-import Layout from '~/layouts/LandingLayout.astro';
+import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import superAndrew from '~/assets/images/superAndrew.jpg'
+
 const metadata = {
-  title: 'Subscription Landing Page Demo',
+  title: 'Alumni',
 };
 ---
 
@@ -13,37 +15,17 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Subscription Landing Demo"
-    title="Subscription Landing Page: Turn Casual Browsers into Loyal Subscribers!"
-    subtitle="Unlock the formula for a Subscription Landing Page that keeps your audience coming back for more."
+    tagline="UT Dallas Rugby"
+    title="Alumni Form"
+    subtitle="Do the form or get the Gorm."
     actions={[
-      { variant: 'primary', text: 'Call to Action', href: '#', icon: 'tabler:square-rounded-arrow-right' },
-      { text: 'Learn more', href: '#' },
+      { variant: 'primary', text: 'Do the form', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeVJc4k4nan_9goNj1f9F_U638-n-tGFO3-ZcsEsB2V1eWVYg/viewform?usp=sf_link', icon: 'tabler:square-rounded-arrow-right' },
+      {text: 'Get the Gorm', href: 'https://youtu.be/dQw4w9WgXcQ?si=WmKec9H9yFi3Z1pK' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1593510987046-1f8fcfc512a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Ironic image associated with canceling a subscription. Subscription Landing Page Demo',
+      src: superAndrew,
+      alt: 'Andrew Whities scoring a try',
     }}
   />
 
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLSeVJc4k4nan_9goNj1f9F_U638-n-tGFO3-ZcsEsB2V1eWVYg/viewform?embedded=true"
-    width="640"
-    height="2167"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0">Loading…</iframe
-  >
-  <CallToAction
-    title="Coming soon"
-    subtitle="We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Download Template',
-        href: 'https://github.com/onwidget/astrowind',
-        icon: 'tabler:download',
-      },
-    ]}
-  />
 </Layout>
