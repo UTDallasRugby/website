@@ -71,6 +71,5 @@ Update the Google Calendar and it will update on the site.
 Change the iframe URLs to have the new season
 
 ```html
-https://usarugbystats.com/.../2019-2020/schedule ->
-https://usarugbystats.com/.../2020-2021/schedule
+https://usarugbystats.com/.../2019-2020/schedule -> https://usarugbystats.com/.../2020-2021/schedule
 ```

@@ -12,5 +12,4 @@ meta:
   title: Sponsors
 ---
 
-
 Test Sponsors Page Content
