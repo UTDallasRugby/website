@@ -15,26 +15,26 @@ export const headerData = {
         },
       ],
     },
-
-    {
-      text: 'Gallery',
-      href: getPermalink('/gallery'),
-    },
+    // TODO
+    // {
+    //   text: 'Gallery',
+    //   href: getPermalink('/gallery'),
+    // },
     {
       text: 'Alumni',
       href: getPermalink('/alumni'),
     },
-
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
-    },
+    // TODO
+    // {
+    //   text: 'Blog',
+    //   href: getBlogPermalink(),
+    // },
   ],
   actions: [{ text: 'Shop', href: getPermalink('/shop'), target: '_blank' }],
 };
 
 export const footerData = {
-  // TODO
+  // TODO Leaving as example
   // links: [
   //   {
   //     title: 'Product',
