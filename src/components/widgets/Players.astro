@@ -58,11 +58,10 @@ const supported_social = [
                       <Fragment set:html={image} />
                     ) : (
                       <Image
-                        class="h-100 w-100 rounded-lg border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
+                        class="h-400 w-400 rounded-lg border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
                         width={400}
                         height={400}
                         widths={[400, 768]}
-                        layout="fixed"
                         {...(image as any)}
                       />
                     )}

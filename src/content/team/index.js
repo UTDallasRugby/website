@@ -1,4 +1,5 @@
 // Configuration for the team component / page
+const placeHolderImage = { src: '~/assets/images/new_rugby.png', alt: "UTD Rugby Logo"}
 
 const team = {
   // Whether the team page is enabled or not
@@ -21,10 +22,7 @@ const team = {
       favoriteProtein: 'Grilled Chicken 🍗',
       favoriteLift: 'T-bar Rows',
       position: 'Prop',
-      image: {
-        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-        alt: 'Emily Kennedy Image',
-      },
+      image: placeHolderImage,
       social: {
         website: '#',
         // twitter: '#',
@@ -65,11 +63,7 @@ const team = {
       nationality: 'American 🇺🇸🦅🇪',
       favoriteProtein: '🍗',
       favoriteLift: 'Rear Delt Fly',
-
-      image: {
-        src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-        alt: 'Mark Wilkinson Image',
-      },
+      image: placeHolderImage,
     },
     {
       testimonial: ``,
