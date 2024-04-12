@@ -1,5 +1,5 @@
 // Configuration for the team component / page
-const placeHolderImage = { src: '~/assets/images/new_rugby.png', alt: "UTD Rugby Logo"}
+const placeHolderImage = { src: '~/assets/images/new_rugby.png', alt: 'UTD Rugby Logo' };
 
 const team = {
   // Whether the team page is enabled or not

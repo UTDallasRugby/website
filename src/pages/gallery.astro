@@ -1,0 +1,57 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Gallery',
+};
+---
+
+{/* TODO Pull these in*/}
+<Layout metadata={metadata}>
+  <div class="grid justify-items-center">
+    <h1 class="text-4xl">Gallery</h1>
+    <a href="https://utdallasrugby.weebly.com/match-pix.html" class="text-xl text-primary underline">Weebly Photos</a>
+
+    <h2 class="text-xl text-primary underline"><a href="">Rice November 18th 2017</a></h2>
+    <iframe
+      src="https://www.danieldphotos.com/frame/slideshow?key=Vfb54C&speed=3&transition=fade&autoStart=1&captions=0&navigation=0&playButton=0&randomize=0&transitionSpeed=2"
+      width="800"
+      height="600"
+      frameborder="no"
+      scrolling="no"></iframe>
+    <h2>LSC 7s State Championship April 22nd 2017</h2>
+    <iframe
+      src="https://www.danieldphotos.com/frame/slideshow?key=tPgthW&speed=3&transition=fade&autoStart=1&captions=0&navigation=0&playButton=0&randomize=0&transitionSpeed=2"
+      frameborder="no"
+      scrolling="no"></iframe>
+    <h2>Feb 20th 2016</h2>
+    <iframe
+      src="https://www.danieldphotos.com/frame/slideshow?key=D8kpPc&speed=3&transition=fade&autoStart=1&captions=0&navigation=0&playButton=0&randomize=0&transitionSpeed=2"
+      width="800"
+      height="600"
+      frameborder="no"
+      scrolling="no"></iframe>
+    <h2>UD Jan 23rd 2016</h2>
+    <iframe
+      src="https://www.danieldphotos.com/frame/slideshow?key=FDkSMV&speed=3&transition=fade&autoStart=1&captions=0&navigation=0&playButton=0&randomize=0&transitionSpeed=2"
+      width="800"
+      height="600"
+      frameborder="no"
+      scrolling="no"></iframe>
+  </div>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/',
+      },
+    ]}
+    title="Sponsor Us"
+    subtitle="We're always looking for new sponsors!"
+  />
+</Layout>

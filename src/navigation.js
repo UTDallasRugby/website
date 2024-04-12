@@ -15,11 +15,10 @@ export const headerData = {
         },
       ],
     },
-    // TODO
-    // {
-    //   text: 'Gallery',
-    //   href: getPermalink('/gallery'),
-    // },
+    {
+      text: 'Gallery',
+      href: getPermalink('/gallery'),
+    },
     {
       text: 'Alumni',
       href: getPermalink('/alumni'),
