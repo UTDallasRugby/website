@@ -2,19 +2,21 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'Team',
-      links: [
-        {
-          text: 'Coaches and Exec Team',
-          href: getPermalink('/coaches'),
-        },
-        {
-          text: 'Roster',
-          href: getPermalink('/roster'),
-        },
-      ],
-    },
+    // TODO Update Coaches info and Exec Team
+    // {
+    //   text: 'Team',
+    //   links: [
+    //     {
+    //       text: 'Coaches and Exec Team',
+    //       href: getPermalink('/coaches'),
+    //     },
+    // TODO Update Roster with player info and pictures
+    //     {
+    //       text: 'Roster',
+    //       href: getPermalink('/roster'),
+    //     },
+    //   ],
+    // },
     {
       text: 'Gallery',
       href: getPermalink('/gallery'),
