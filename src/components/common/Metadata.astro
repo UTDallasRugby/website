@@ -24,6 +24,8 @@ const {
   twitter = {},
 } = Astro.props;
 
+const siteUrl = SITE?.site ? new URL(SITE.site).origin : canonical;
+
 const seoProps: AstroSeoProps = merge(
   {
     title: '',
@@ -63,6 +65,37 @@ const seoProps: AstroSeoProps = merge(
     twitter: twitter,
   }
 );
+
+const pageTitle = seoProps?.title || SITE?.name;
+const pageDescription = seoProps?.description || METADATA?.description;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SportsOrganization',
+    '@id': `${siteUrl}/#organization`,
+    name: SITE?.name,
+    url: siteUrl,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    name: SITE?.name,
+    url: siteUrl,
+    publisher: { '@id': `${siteUrl}/#organization` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${canonical}#webpage`,
+    url: canonical,
+    name: pageTitle,
+    description: pageDescription,
+    isPartOf: { '@id': `${siteUrl}/#website` },
+    about: { '@id': `${siteUrl}/#organization` },
+  },
+];
 ---
 
 <AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} />
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

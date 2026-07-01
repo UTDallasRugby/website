@@ -11,7 +11,7 @@ metadata:
   title:
     default: UT Dallas Rugby
     template: '%s — UT Dallas Rugby'
-  description: 'UTD Dallas Rugby. Wanna play? Welcoming players of all skill levels who are interested in trying out the greatest sport there is.'
+  description: 'Official site of UT Dallas Rugby: join the men’s club, see practices, match updates, coaches, alumni, sponsors, and ways to get involved in Richardson, TX.'
   robots:
     index: true
     follow: true
